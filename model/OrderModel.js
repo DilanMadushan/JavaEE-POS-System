@@ -1,11 +1,12 @@
-export class OrderModel{
-    constructor(orderId,cusId,proId,qty,price) {
+export class OrderModel {
+    constructor(orderId, cusId, proId, qty, price) {
         this._orderId = orderId;
         this._cusId = cusId;
         this._proId = proId;
         this._qty = qty;
         this._price = price;
     }
+
     get orderId() {
         return this._orderId;
     }

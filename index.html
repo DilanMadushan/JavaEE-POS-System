@@ -331,17 +331,10 @@
 
         <div class="grid gap-6 mb-6 md:grid-cols-2 mx-10 my-5">
           <div>
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Customer Id</label
-            >
-            <input
-              type="text"
-              id="orderCustomerId"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="C001"
-              required
-            />
+            <label for="orderCusId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Id</label>
+            <select id="orderCusId" name="orderCusId"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+            </select>
           </div>
           <div>
             <label
@@ -357,17 +350,10 @@
             />
           </div>
           <div>
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Product Id</label
-            >
-            <input
-              type="text"
-              id="orderItemId"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="O001"
-              required
-            />
+            <label for="orderProId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Id</label>
+            <select id="orderProId" name="orderProId"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+            </select>
           </div>
           <div>
             <label
@@ -416,6 +402,7 @@
 
         <div class="m-10">
           <button
+            id="addOrder"
             type="button"
             class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-5"
           >
@@ -423,6 +410,7 @@
           </button>
 
           <button
+            id="deleteOrder"
             type="button"
             class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-5"
           >
@@ -430,6 +418,7 @@
           </button>
 
           <button
+            id="placeOrder"
             type="button"
             class="text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:orange-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-5"
           >
@@ -455,70 +444,9 @@
                 <th scope="col" class="px-6 py-3">Qty</th>
               </tr>
             </thead>
-            <tbody>
-              <tr
-                class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">Silver</td>
-                <td class="px-6 py-4">Laptop</td>
-                <td class="px-6 py-4">$2999</td>
-              </tr>
-              <tr
-                class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Microsoft Surface Pro
-                </th>
-                <td class="px-6 py-4">White</td>
-                <td class="px-6 py-4">Laptop PC</td>
-                <td class="px-6 py-4">$1999</td>
-              </tr>
-              <tr
-                class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Magic Mouse 2
-                </th>
-                <td class="px-6 py-4">Black</td>
-                <td class="px-6 py-4">Accessories</td>
-                <td class="px-6 py-4">$99</td>
-              </tr>
-              <tr
-                class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Google Pixel Phone
-                </th>
-                <td class="px-6 py-4">Gray</td>
-                <td class="px-6 py-4">Phone</td>
-                <td class="px-6 py-4">$799</td>
-              </tr>
-              <tr>
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Apple Watch 5
-                </th>
-                <td class="px-6 py-4">Red</td>
-                <td class="px-6 py-4">Wearables</td>
-                <td class="px-6 py-4">$999</td>
-              </tr>
+            <tbody id="orderTable">
+
+
             </tbody>
           </table>
         </div>
@@ -543,5 +471,6 @@
     <script src="assets/spa.js"></script>
     <script src="/controller/CustomerController.js" type="module"></script>
     <script src="controller/ProductController.js" type="module"></script>
+    <script src="controller/OrderController.js" type="module"></script>
   </body>
 </html>

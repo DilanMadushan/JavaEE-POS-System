@@ -25,6 +25,7 @@ $('#addCustomer').on('click', function(){
         }),
 
         success:function(results){
+            console.log(results);
             getAll();
         },
 
@@ -139,6 +140,14 @@ function setIds(){
     customerData.forEach(item => {
         var recode = `<option value="${item.id}">${item.id}</option>`;
         $('#cusId').append(recode);
+    });
+
+
+    $('#orderCusId').empty();
+
+    customerData.forEach(item => {
+        var recode = `<option value="${item.id}">${item.id}</option>`;
+        $('#orderCusId').append(recode);
     });
 
 }

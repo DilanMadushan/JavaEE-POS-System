@@ -25,6 +25,13 @@ $('#orderButton').on('click', function(){
 
 });
 
+$(document).ready(function(){
+    $('#orderSection').css({display:'none'});
+    $('#customerSection').css({display:'none'});
+    $('#itemSection').css({display:'none'});
+    $('#cardSection').css({display:'none'});
+})
+
 
 // $('#hambeger').on('click', function(){
 

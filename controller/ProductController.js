@@ -3,11 +3,7 @@ import {productData} from "../db/db.js";
 
 
 $('#itemSection').ready(function (){
-
     getAll();
-
-    console.log("Ready")
-
 });
 
 
@@ -122,6 +118,15 @@ function setIds(){
     productData.map(item =>{
        var recode =`<option value="${item.id}">${item.id}</option>`;
        $('#proId').append(recode);
+    });
+
+
+
+    $('#orderProId').empty();
+
+    productData.map(item =>{
+        var recode =`<option value="${item.id}">${item.id}</option>`;
+        $('#orderProId').append(recode);
     });
 
 }
